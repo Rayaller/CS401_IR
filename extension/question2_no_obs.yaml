@@ -1,0 +1,19 @@
+world:
+  height: 10  # the height of the world
+  width: 10   # the height of the world
+  step_time: 0.1  # 10Hz calculate each step
+
+robots:
+  type: 'robot_omni'  # # robot_omni, robot_diff, robot_acker
+  number: 1
+  state: [4, 4]  
+  radius: 0.2 # radius of the robot
+  goal: [5, 5]  # goal position of the robot
+  vel_min: [-2, -2]
+  vel_max: [2, 2]
+  radius_exp: 0.1  # collision radius = radius + radius_exp
+
+obstacles:
+  - type: 'obstacle_line'
+    number: 0
+    distribute: {mode: 'manual', states: [ [0, 1, 0.2]], shapes: [[20, 0.1]]}
